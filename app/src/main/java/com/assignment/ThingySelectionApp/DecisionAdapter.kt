@@ -1,6 +1,7 @@
 package com.assignment.ThingySelectionApp
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +22,6 @@ class DecisionAdapter(private val decisionThings: List<String>, private val list
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.decisionTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null ,null ,null)
         holder.bindItems(decisionThings.get(position))
     }
 
@@ -30,6 +30,7 @@ class DecisionAdapter(private val decisionThings: List<String>, private val list
             itemView.setOnClickListener(this)
         }
         fun bindItems(decisionThings: String) {
+            itemView.decisionTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null ,null ,null)
             itemView.decisionTextView.text = decisionThings
         }
 
