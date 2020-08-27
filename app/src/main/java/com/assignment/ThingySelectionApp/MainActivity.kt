@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity(), DecisionAdapter.OnItemClickListener {
         }
     }
 
-    override fun onRestart() {
-        super.onRestart()
+    override fun onPause() {
+        super.onPause()
         positionOfDecisionThing.clear()
         adapter.notifyDataSetChanged()
 
